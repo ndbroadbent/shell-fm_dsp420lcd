@@ -1,7 +1,7 @@
 h1. Shell.fm info on a DSP-420 LCD display
 
-This is a ruby script that displays the currently displaying artist, title and remaining time
-on a DSP-420 LCD display (RS232 display found on POS systems).
+This is a ruby script that displays the current artist, title and remaining time
+on a DSP-420 LCD display (RS232 LCD display found on POS systems).
 It uses threads to manage scrolling and to fake a count-down of the remaining time
 between shell.fm refreshes. It updates the display with any changes every 0.1 seconds.
 
