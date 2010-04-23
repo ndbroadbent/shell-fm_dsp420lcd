@@ -1,0 +1,25 @@
+h1. Shell.fm info on a DSP-420 LCD display
+
+This is a ruby script that displays the currently displaying artist, title and remaining time
+on a DSP-420 LCD display (RS232 display found on POS systems).
+It uses threads to manage scrolling and to fake a count-down of the remaining time
+between shell.fm refreshes. It updates the display with any changes every 0.1 seconds.
+
+h3. Requirements:
+
+* Ruby
+* shell.fm running with the network service enabled
+* DSP-420 LCD display (via RS232)
+
+h3. Notes
+
+On its own, this script probably isn't worth anything to anybody..
+It's also not very modular (ie, it was written quickly with a single purpose in mind),
+but I am putting it on github simply because it could be used as a starting point
+for any kind of shell.fm display, or anyone that wants to use a DSP-420 LCD display on Linux.
+
+h3. DSP-420 Notes
+
+My DSP-420 was the 5V model, so I hacked a USB -> Serial Adapter to supply 5v to the display from the USB port.
+I can then power and run the DSP-420 entirely from a single USB port. (It usually requires an external 5V/9V DC power supply.)
+
