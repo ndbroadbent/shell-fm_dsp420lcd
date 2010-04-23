@@ -115,7 +115,7 @@ at_exit {
 # -------------- Script Start -------------------
 
 # Display initial splash screen
-write_lcd("shell.fm lcd display" +
+write_lcd("shell.fm LCD display" +
           "(c) Nathan Broadbent")
 sleep 2
 
