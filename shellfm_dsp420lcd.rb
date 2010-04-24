@@ -124,10 +124,10 @@ sleep 2
 # Also set up buffers to keep track of value changes.
 artist, title, remain = shellfm_info
 remain = remain.to_f
-@artist, ar_buf, ar_pos_buf = set_widget_values(artist, 1, 28, 13), artist, 1
+@artist, ar_buf, ar_pos_buf = set_widget_values(artist, 1, 27, 14), artist, 1
 @title, tt_buf, tt_pos_buf = set_widget_values(title, 1, 1, 20), title, 1
 time = format_time(remain)
-@time, tm_buf = [(time + "| "), 21, 6], time
+@time, tm_buf = [(time + " "), 21, 6], time
 write_lcd @time[0], @time[1], (@time[2] + @time[1]), false
 
 # ------------------- Initialize threads -------------------
@@ -163,7 +163,7 @@ scroll_thread = Thread.new {
 while true
   # set values if they have changed.
   if artist != ar_buf
-    @artist = set_widget_values(artist, 1, 28, 13)
+    @artist = set_widget_values(artist, 1, 27, 14)
     ar_buf = artist
   end
   if title != tt_buf
@@ -182,7 +182,7 @@ while true
   # Writes the remaining time data.
   time = format_time(remain)
   if time != tm_buf
-    @time = [(time + "| "), 21, 6]
+    @time = [(time + " "), 21, 6]
     tm_buf = time
     write_lcd @time[0], @time[1], (@time[2] + @time[1]), false
   end
